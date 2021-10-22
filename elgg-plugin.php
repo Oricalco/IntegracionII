@@ -22,6 +22,11 @@ return [
                         'resource' => 'proyecto/add',
                         'access' => 'public',
                 ],
+                'all:object:blog' => [
+                        'path' => '/proyecto/all/',
+                        'resource' => 'proyecto/all',
+                        'access' => 'public',
+                ],
                 'edit:object:blog' => [
                         'path' => '/proyecto/edit/{guid}/{revision?}',
                         'resource' => 'proyecto/edit',
