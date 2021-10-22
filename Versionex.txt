@@ -1,0 +1,12 @@
+Nicolas (WAMP)
+Elgg 3.3.21
+PHP 7.3.21
+Wampserver 3.2.3
+Apache 2.4.46
+==================
+Resto del grupo (XAMPP)
+Elgg 3.3.21
+PHP 7.4.9
+XAMPP 7.4.25 
+Apache 2.4.51
+XAMPP Control Panel 3.2.4
