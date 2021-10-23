@@ -1,4 +1,5 @@
 <?php
+require 'vendor/autoload.php'; // incluir lo bueno de Composer
 
 function my_blog_init() {
     // register a hook handler to override urls

@@ -10,6 +10,7 @@ return [
         ],
         'actions' => [
                 'proyecto/save' => [],
+                'proyecto/test' => [],
         ],
         'routes' => [
                 'view:object:blog' => [

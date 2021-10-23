@@ -19,6 +19,18 @@ $blog->access_id = ACCESS_PUBLIC;
 // owner is logged in user
 $blog->owner_guid = elgg_get_logged_in_user_guid();
 
+///////////////MONGO//////////////
+$cliente = new MongoDB\Client("mongodb+srv://nico:nico1234@cluster0.oxwjx.mongodb.net/myFirstDatabase?retryWrites=true&w=majority");
+$colección = $cliente->Test->Usuarios;
+
+$resultado = $colección->insertOne( [
+     'titulo' =>  $title,
+     'cuerpo'  => $body,
+     'tags' => $tags,
+] );
+
+//////////////////////////////////
+
 // save to database and get id of the new my_blog
 $blog_guid = $blog->save();
 
