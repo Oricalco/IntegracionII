@@ -9,7 +9,7 @@ $blog = new ElggObject();
 $blog->title = $title;
 $blog->description = $body;
 $blog->tags = $tags;
-
+$guid = elgg_get_logged_in_user_guid();
 // the object can and should have a subtype
 $blog->subtype = 'proyecto';
 
@@ -17,13 +17,14 @@ $blog->subtype = 'proyecto';
 $blog->access_id = ACCESS_PUBLIC;
 
 // owner is logged in user
-$blog->owner_guid = elgg_get_logged_in_user_guid();
+$blog->owner_guid = $guid;
 
 ///////////////MONGO//////////////
 $cliente = new MongoDB\Client("mongodb+srv://nico:nico1234@cluster0.oxwjx.mongodb.net/myFirstDatabase?retryWrites=true&w=majority");
 $colección = $cliente->Test->Usuarios;
 
 $resultado = $colección->insertOne( [
+      'guid' => $guid,
      'titulo' =>  $title,
      'cuerpo'  => $body,
      'tags' => $tags,
@@ -37,9 +38,9 @@ $blog_guid = $blog->save();
 // if the my_blog was saved, we want to display the new post
 // otherwise, we want to register an error and forward back to the form
 if ($blog_guid) {
-   system_message("Your blog post was saved.");
+   system_message("Se ha guardado correctamente");
    forward($blog->getURL());
 } else {
-   register_error("The blog post could not be saved.");
+   register_error("No pudo ser guardado");
    forward(REFERER); // REFERER is a global variable that defines the previous page
 }

@@ -9,8 +9,9 @@ return [
                 ],
         ],
         'actions' => [
-                'proyecto/save' => [],
-                'proyecto/test' => [],
+                'proyecto/save' => [
+                        'access' => 'public',
+                ],
         ],
         'routes' => [
                 'view:object:blog' => [
