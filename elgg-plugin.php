@@ -12,6 +12,7 @@ return [
                 'proyecto/save' => [
                         'access' => 'public',
                 ],
+                'proyecto/delete' => [],
         ],
         'routes' => [
                 'view:object:blog' => [
