@@ -1,8 +1,11 @@
 <?php
 
+//elgg_register_event_handler('init', 'system', proyecto_init);
+
 function proyecto_init() {
-    // register a hook handler to override urls
     elgg_register_plugin_hook_handler('entity:url', 'object', 'proyecto_set_url');
+    elgg_extend_view('page/elements/sidebar', 'proyecto/barra');
+    
 }
 
 return function() {
