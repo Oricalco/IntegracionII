@@ -20,7 +20,7 @@ $blog->access_id = ACCESS_PUBLIC;
 $blog->owner_guid = $guid;
 
 ///////////////MONGO//////////////
-$cliente = new MongoDB\Client("mongodb+srv://nico:nico1234@cluster0.oxwjx.mongodb.net/myFirstDatabase?retryWrites=true&w=majority");
+/*$cliente = new MongoDB\Client("mongodb+srv://nico:nico1234@cluster0.oxwjx.mongodb.net/myFirstDatabase?retryWrites=true&w=majority");
 $colección = $cliente->Test->Usuarios;
 
 $resultado = $colección->insertOne( [
@@ -28,7 +28,7 @@ $resultado = $colección->insertOne( [
      'titulo' =>  $title,
      'cuerpo'  => $body,
      'tags' => $tags,
-] );
+] ); */
 
 //////////////////////////////////
 

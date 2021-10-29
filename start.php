@@ -1,5 +1,4 @@
 <?php
-require 'vendor/autoload.php'; // incluir lo bueno de Composer
 
 function proyecto_init() {
     // register a hook handler to override urls
