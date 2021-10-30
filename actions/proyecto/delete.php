@@ -12,6 +12,14 @@ if (!($blog instanceof \ElggBlog) || !$blog->canDelete()) {
 	return elgg_error_response(elgg_echo('proyecto:error:post_not_found'));
 }
 
+///////////////MONGO//////////////
+$cliente = new MongoDB\Client("mongodb+srv://nico:nico1234@cluster0.oxwjx.mongodb.net/myFirstDatabase?retryWrites=true&w=majority");
+$colección = $cliente->Test->Usuarios;
+
+
+//////////////////////////////////
+
+
 $container = $blog->getContainerEntity();
 if (!$blog->delete()) {
 	return elgg_error_response(elgg_echo('proyecto:error:cannot_delete_post'));
