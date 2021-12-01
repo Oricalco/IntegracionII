@@ -1,7 +1,7 @@
 <?php
 
 // set the title
-$title = "Nuevo Post";
+$title = "New Post";
 
 // add the form to the main column
 $content = elgg_view_form("proyecto/save");

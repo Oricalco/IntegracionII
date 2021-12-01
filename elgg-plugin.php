@@ -13,6 +13,10 @@ return [
                         'access' => 'public',
                 ],
                 'proyecto/delete' => [],
+                'proyecto/export' => [
+                        'access' => 'public',
+                        'filename' => __DIR__ . '/actions/export.php'
+                ],
         ],
         'routes' => [
                 'view:object:blog' => [
